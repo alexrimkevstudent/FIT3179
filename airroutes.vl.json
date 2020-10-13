@@ -5,7 +5,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/us-10m.json",
+        "url": "us-10m.json",
         "format": {
           "type": "topojson",
           "feature": "states"
@@ -22,7 +22,7 @@
     },
     {
       "data": {
-        "url": "data/airports.csv"
+        "url": "airports.csv"
       },
       "projection": {
         "type": "albersUsa"
@@ -47,7 +47,7 @@
     },
     {
       "data": {
-        "url": "data/flights-airport.csv"
+        "url": "flights-airport.csv"
       },
       "transform": [
         {
