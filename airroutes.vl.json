@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "U.S Air Routes used Between 50 and 100 Times",
   "width": 800,
   "height": 500,
   "layer": [
