@@ -3,6 +3,9 @@
   "description": "U.S Air Routes used Between 50 and 100 Times",
   "width": 800,
   "height": 500,
+  "title": {
+    "text": "U.S Air Routes used Between 50 and 100 Times"
+  },
   "layer": [
     {
       "data": {
