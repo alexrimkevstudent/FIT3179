@@ -6,6 +6,30 @@
   "title": {
     "text": "U.S Air Routes used Between 50 and 100 Times"
   },
+  "params": [
+    {
+      "name": "Min_Count",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 13788,
+        "step": 1, 
+        "name": "Minimum"
+      }
+    },
+    {
+      "name": "Max_Count",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 13788,
+        "step": 1, 
+        "name": "Maximum"
+      }
+    }
+  ],
   "layer": [
     {
       "data": {
@@ -54,18 +78,8 @@
         "url": "flights-airport.csv"
       },
       "transform": [
-        {
-          "filter": {
-            "field": "count",
-            "lt": 100
-          }
-        },
-        {
-          "filter": {
-            "field": "count",
-            "gt": 50
-          }
-        },
+        {"filter": "datum.count > Min_Count"},
+        {"filter": "datum.count < Max_Count"},
         {
           "lookup": "origin",
           "from": {
