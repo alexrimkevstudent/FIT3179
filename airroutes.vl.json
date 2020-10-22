@@ -14,7 +14,7 @@
         "input": "range",
         "min": 0,
         "max": 13788,
-        "step": 1, 
+        "step": 10, 
         "name": "Minimum"
       }
     },
@@ -25,7 +25,7 @@
         "input": "range",
         "min": 0,
         "max": 13788,
-        "step": 1, 
+        "step": 10, 
         "name": "Maximum"
       }
     }
