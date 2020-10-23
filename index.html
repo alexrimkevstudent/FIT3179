@@ -8,12 +8,20 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 <body>
-
-<div id="vis"></div>
+  <h1>The myth of 'Flyover Country'</h1>
+  <h2>A Map of the Usage of Flight Paths Across the USA</h2>
+<div id="flightPathMap"></div>
+  <h2>Number of Airports in Each State</h2>
+<div id="BarChart"></div>
 
 <script type="text/javascript">
-  var spec = "https://alexrimkevstudent.github.io/FIT3179/airroutes.vl.json";
-  vegaEmbed('#vis', spec).then(function(result) {
+  var vis1 = "https://alexrimkevstudent.github.io/FIT3179/airroutes.vl.json";
+  vegaEmbed('#flightPathMap', vis1).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  
+  var vis2 = "https://alexrimkevstudent.github.io/FIT3179/barChart.vl.json";  
+  vegaEmbed('#BarChart', vis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
 </script>
