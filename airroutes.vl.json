@@ -20,7 +20,7 @@
     },
     {
       "name": "Max_Count",
-      "value": 0,
+      "value": 100,
       "bind": {
         "input": "range",
         "min": 0,
