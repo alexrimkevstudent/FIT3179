@@ -4,7 +4,7 @@
   "width": 800,
   "height": 500,
   "title": {
-    "text": "U.S Air Routes used Between 50 and 100 Times"
+    "text": "No. of Times U.S Air Routes Were Used in a Year"
   },
   "params": [
     {
