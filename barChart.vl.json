@@ -1,0 +1,18 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {"url": "data/airports.csv"},
+  "transform": [{"filter": {"field": "country", "equal": "USA"}}],
+  "title": {"text": "Number of Airports per U.S State"},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "state",
+      "type": "nominal",
+      "sort": "-y",
+      "axis": {"labelAngle": 0}
+    },
+    "y": {"aggregate": "count", "type": "quantitative"}
+  },
+  "config": {}
+}
