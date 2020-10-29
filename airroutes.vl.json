@@ -48,31 +48,7 @@
         "stroke": "white"
       }
     },
-    {
-      "data": {
-        "url": "airports.csv"
-      },
-      "projection": {
-        "type": "albersUsa"
-      },
-      "mark": "circle",
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "size": {
-          "value": 5
-        },
-        "color": {
-          "value": "gray"
-        }
-      }
-    },
+    
     {
       "data": {
         "url": "flights-airport.csv"
