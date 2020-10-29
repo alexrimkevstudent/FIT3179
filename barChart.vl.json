@@ -3,7 +3,7 @@
   "description": "A simple bar chart with embedded data.",
   "transform": [{"filter": {"field": "country", "equal": "USA"}}],
   "title": {"text": "Number of Airports per U.S State"},
-  "data": {"url": "data/airports.csv"},
+  "data": {"url": "airports.csv"},
   "layer": [
     {
       "mark": "bar",
