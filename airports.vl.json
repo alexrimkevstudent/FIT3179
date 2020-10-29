@@ -10,19 +10,19 @@
         "strokeWidth": 1
       },
       "data": {
-        "url": "data/us-10m.json",
+        "url": "us-10m.json",
         "format": {"type": "topojson", "feature": "states"}
       }
     },
     {
       "mark": {"type": "circle"},
-      "data": {"url": "data/flights-airport.csv"},
+      "data": {"url": "flights-airport.csv"},
       "transform": [
         {"aggregate": [{"op": "count", "as": "routes"}], "groupby": ["origin"]},
         {
           "lookup": "origin",
           "from": {
-            "data": {"url": "data/airports.csv"},
+            "data": {"url": "airports.csv"},
             "key": "iata",
             "fields": ["state", "latitude", "longitude"]
           }
