@@ -1,18 +1,29 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple bar chart with embedded data.",
-  "data": {"url": "airports.csv"},
   "transform": [{"filter": {"field": "country", "equal": "USA"}}],
   "title": {"text": "Number of Airports per U.S State"},
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "state",
-      "type": "nominal",
-      "sort": "-y",
-      "axis": {"labelAngle": 0}
-    },
-    "y": {"aggregate": "count", "type": "quantitative"}
-  },
+  "data": {"url": "data/airports.csv"},
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-y",
+          "axis": {"labelAngle": 0}
+        },
+        "y": {"aggregate": "count", "type": "quantitative"},
+        "color": {
+          "condition": {
+            "test": "datum.state == 'IL'||datum.state == 'WI'||datum.state == 'IN'||datum.state == 'IA'||datum.state == 'KS'||datum.state == 'MN'||datum.state == 'MI'||datum.state == 'MS'||datum.state == 'NE'||datum.state == 'ND'||datum.state == 'SD'||datum.state == 'OH'||datum.state == 'WI'",
+            "value": "red"
+          },
+          "value": "#abcd"
+        }
+      }
+    }
+  ],
   "config": {}
 }
